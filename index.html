@@ -1,13 +1,4 @@
-import web
 
-urls = (
-    '/', 'index',
-    '/prayer_table','prayer_table',
-    '/ZW','ZW',
-)
-
-def getHTML():
-    return"""
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -124,10 +115,7 @@ def getHTML():
     </div>
 </body>
 </html>
-"""
 
-def tianshenwu():
-    return"""
     <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -232,18 +220,4 @@ def tianshenwu():
 
 </body>
 </html>
-"""
-
-webpage = web.application(urls, globals())
-
-class index:
-    def GET(self):
-        return getHTML()
-    
-class prayer_table():
-    def GET(self):
-        return tianshenwu()
-    
-if __name__ == "__main__":
-    webpage.run()
 
